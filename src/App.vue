@@ -1,3 +1,13 @@
-<template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
-</template>
+<template></template>
+
+<script setup lang="ts">
+import { onMounted } from "@vue/runtime-core";
+import Globe from "globe.gl";
+
+onMounted(() => {
+  const container = document.createElement("div");
+  const app = document.getElementById("app")?.appendChild(container);
+  const myGlobe = Globe();
+  myGlobe(container).globeImageUrl("lunar.jpg");
+});
+</script>
