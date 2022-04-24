@@ -1,13 +1,15 @@
-<template></template>
+<template>
+  <h1>Globe vue component</h1>
+  <Globe></Globe>
+</template>
 
-<script setup lang="ts">
-import { onMounted } from "@vue/runtime-core";
-import Globe from "globe.gl";
+<script lang="ts">
+import Globe from "./components/Globe.vue";
 
-onMounted(() => {
-  const container = document.createElement("div");
-  const app = document.getElementById("app")?.appendChild(container);
-  const myGlobe = Globe();
-  myGlobe(container).globeImageUrl("lunar.jpg");
-});
+export default {
+  components: { Globe },
+};
 </script>
+
+<style scoped>
+</style>
